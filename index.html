@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <style>
+    button {
+      border:none;
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 10px 15px;
+    }
+    button i {
+      color:white;
+      font-size: 1.3rem;
+    }
+    #player {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,1);
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+<div id="player" style="width: 800px; height: 600px;">
+  <div class="js-video-container player-container" style="width: 100%; height: 100%"></div>
+  <div class="controls" style="background: black;">
+    <div class="controls__playback">
+      <button class="js-play-button">
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button class="js-pause-button" hidden>
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
+      <button class="js-mute-button">
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
+      </button>
+      <button class="js-volume-button" hidden>
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="controls__fullscreen">
+      <button class="js-fullscreen-button">
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="player.js"></script>
+
+  <script type="text/javascript">
+    createPlayer({elementId: 'player'});
+  </script>
+</body>
+</html>
