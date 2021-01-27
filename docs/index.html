@@ -8,12 +8,12 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <style>
-    .player_controls__button {
+    .player-button {
       border:none;
       background-color: rgba(0, 0, 0, 0.0);
       padding: 10px 15px;
     }
-    .player_controls__button i {
+    .player-button i {
       color:white;
       font-size: 1.3rem;
     }
@@ -24,7 +24,7 @@
       width: 800px;
       height: 600px;
     }
-    .player_controls {
+    .player-controls {
       display: flex;
       justify-content: space-between;
     }
@@ -33,23 +33,23 @@
 <body>
   <div id="player" class="player">
     <div class="js-video-container player-container" style="width: 100%; height: 100%"></div>
-    <div class="player_controls" style="background: black;">
-      <div class="player_controls__playback">
-        <button class="js-play-button player_controls__button">
+    <div class="player-controls" style="background: black;">
+      <div class="player-controls--playback">
+        <button class="js-play-button player-button">
           <i class="fa fa-play" aria-hidden="true"></i>
         </button>
-        <button class="js-pause-button player_controls__button" hidden>
+        <button class="js-pause-button player-button" hidden>
           <i class="fa fa-pause" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button player_controls__button">
+        <button class="js-mute-button player-button">
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
-        <button class="js-volume-button player_controls__button" hidden>
+        <button class="js-volume-button player-button" hidden>
           <i class="fa fa-volume-off" aria-hidden="true"></i>
         </button>
       </div>
-      <div class="controls__fullscreen">
-        <button class="js-fullscreen-button player_controls__button">
+      <div class="controls--fullscreen">
+        <button class="js-fullscreen-button player-button">
           <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
       </div>
