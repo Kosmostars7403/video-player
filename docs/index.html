@@ -8,25 +8,39 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <style>
-    .player-button {
-      border:none;
-      background-color: rgba(0, 0, 0, 0.0);
-      padding: 10px 15px;
-    }
-    .player-button i {
-      color:white;
-      font-size: 1.3rem;
-    }
     .player {
+      margin-left: -2px;
+      margin-top: -2px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 10px rgba(0,0,0,1);
+      box-shadow: 0 0 20px rgba(0,0,0,1);
       width: 800px;
       height: 600px;
     }
+    .player-container {
+    }
     .player-controls {
+      height: 42px;
       display: flex;
       justify-content: space-between;
+    }
+    .player-button {
+      border:none;
+      background-color: rgba(0, 0, 0, 0.0);
+      padding: 12px 10px;
+    }
+    .player-button i {
+      color:white;
+      font-size: 1rem;
+    }
+    .player-volume {
+      padding: 12px 7px;
+    }
+    .fullscreen-button {
+      padding: 10px 10px;
+    }
+    .fullscreen-button i{
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -41,7 +55,7 @@
         <button class="js-pause-button player-button" hidden>
           <i class="fa fa-pause" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button player-button">
+        <button class="js-mute-button player-button player-volume">
           <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
         <button class="js-volume-button player-button" hidden>
@@ -49,8 +63,8 @@
         </button>
       </div>
       <div class="controls--fullscreen">
-        <button class="js-fullscreen-button player-button">
-          <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+        <button class="js-fullscreen-button player-button fullscreen-button">
+          <i class="fa fa-expand-alt" aria-hidden="true"></i>
         </button>
       </div>
     </div>
